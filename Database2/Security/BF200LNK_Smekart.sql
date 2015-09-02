@@ -1,0 +1,2 @@
+﻿CREATE USER [BF200LNK\Smekart];
+

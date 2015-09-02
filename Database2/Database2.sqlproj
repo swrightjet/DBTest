@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database2</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{7bc1f77d-ef28-42c6-94ef-a22e01cf720d}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database2</RootNamespace>
+    <AssemblyName>Database2</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>USERDATA</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="CODES\" />
+    <Folder Include="CODES\Tables\" />
+    <Folder Include="METADATA\" />
+    <Folder Include="METADATA\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="RULES\" />
+    <Folder Include="RULES\Tables\" />
+    <Folder Include="TASKS\" />
+    <Folder Include="TASKS\Tables\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="RULES\Stored Procedures\" />
+    <Folder Include="CODES\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="CODES\Tables\AuthType.sql" />
+    <Build Include="METADATA\Tables\LookupTable.sql" />
+    <Build Include="CODES\Tables\LogType.sql" />
+    <Build Include="dbo\Tables\AlertEventType.sql" />
+    <Build Include="METADATA\Tables\LookupValue.sql" />
+    <Build Include="RULES\Tables\RuleSet.sql" />
+    <Build Include="dbo\Tables\SecurityAssignment.sql" />
+    <Build Include="dbo\Tables\Alert.sql" />
+    <Build Include="dbo\Tables\Log.sql" />
+    <Build Include="METADATA\Tables\DataType.sql" />
+    <Build Include="dbo\Tables\Module.sql" />
+    <Build Include="dbo\Tables\ModuleConfig.sql" />
+    <Build Include="TASKS\Tables\Process.sql" />
+    <Build Include="dbo\Tables\ModuleScopeType.sql" />
+    <Build Include="dbo\Tables\Permission.sql" />
+    <Build Include="TASKS\Tables\ProcessStep.sql" />
+    <Build Include="dbo\Tables\AlertSubscription.sql" />
+    <Build Include="METADATA\Tables\EntityAttribute.sql" />
+    <Build Include="dbo\Tables\Tenant.sql" />
+    <Build Include="METADATA\Tables\Entity.sql" />
+    <Build Include="METADATA\Tables\EntityStatus.sql" />
+    <Build Include="RULES\Tables\Questionnaire.sql" />
+    <Build Include="RULES\Tables\QuestionnaireDimensionScale.sql" />
+    <Build Include="TASKS\Tables\IntervalType.sql" />
+    <Build Include="dbo\Tables\SecurityAssignmentCache.sql" />
+    <Build Include="METADATA\Tables\EventType.sql" />
+    <Build Include="TASKS\Tables\ProcessLog.sql" />
+    <Build Include="TASKS\Tables\StepType.sql" />
+    <Build Include="RULES\Tables\QuestionnaireDimension.sql" />
+    <Build Include="METADATA\Tables\EntityState.sql" />
+    <Build Include="RULES\Tables\Question.sql" />
+    <Build Include="dbo\Tables\AuthIdentity.sql" />
+    <Build Include="Storage\USERDATA.sql" />
+    <Build Include="Security\BF200LNK_Smekart.sql" />
+    <Build Include="Security\BF200LNK_BhCdsDevAppPool.sql" />
+    <Build Include="Security\BF200LNK_BhCdsDevAppPool_1.sql" />
+    <Build Include="Security\BF200LNK_TDOEDEN.sql" />
+    <Build Include="Security\BF200LNK_TDOEDEN_1.sql" />
+    <Build Include="Security\BF200LNK_BHCDSdevSQLsrvc.sql" />
+    <Build Include="Security\BF200LNK_BHCDSdevSPSApp1Pool.sql" />
+    <Build Include="Security\BF200LNK_BHCDSdevSPSApp1Pool_1.sql" />
+    <Build Include="Security\BF200LNK_BHCDSdevSQLadmin.sql" />
+    <Build Include="Security\BF200LNK_BHCDSdevSQLadmin_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\tvf_DelimitedSplit.sql" />
+    <Build Include="dbo\Functions\tvf_GetUserPermissions.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetAlertCounts.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetAlertListPage.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetUserPermissions.sql" />
+    <Build Include="RULES\Stored Procedures\usp_LoadMdsRulesetStagingTable.sql" />
+    <Build Include="CODES\Stored Procedures\usp_UpdateLookupTables.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetAlertSubscriptions.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProcessAlerts.sql" />
+    <Build Include="dbo\Stored Procedures\usp_UpdateAllMDSEntities.sql" />
+    <Build Include="dbo\Stored Procedures\usp_UpdateMDSEntityTable.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CacheSecurityAssignments.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetUserList.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SendAlert.sql" />
+    <Build Include="Security\CODES.sql" />
+    <Build Include="Security\METADATA.sql" />
+    <Build Include="Security\RULES.sql" />
+    <Build Include="Security\TASKS.sql" />
+  </ItemGroup>
+</Project>

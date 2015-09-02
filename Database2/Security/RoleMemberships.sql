@@ -1,0 +1,10 @@
+﻿ALTER ROLE [db_owner] ADD MEMBER [BF200LNK\BHCDSdevSPSApp1Pool];
+
+
+GO
+ALTER ROLE [db_datareader] ADD MEMBER [BF200LNK\BHCDSdevSQLsrvc];
+
+
+GO
+ALTER ROLE [db_datawriter] ADD MEMBER [BF200LNK\BHCDSdevSQLsrvc];
+

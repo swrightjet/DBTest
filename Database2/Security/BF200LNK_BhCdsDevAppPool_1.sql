@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [BF200LNK\BhCdsDevAppPool]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+
